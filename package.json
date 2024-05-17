@@ -1,0 +1,20 @@
+{
+    "name": "guestbook-app",
+    "version": "1.0.0",
+    "description": "A simple Guestbook application",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "keywords": [
+      "guestbook",
+      "application"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "express": "^4.17.1",
+      "socket.io": "^4.4.1"
+    }
+  }
+  

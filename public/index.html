@@ -1,0 +1,33 @@
+<!-- public/index.html -->
+
+<!DOCTYPE html>
+<html lang="en" style="background-color: #f0f0f0; font-family: Arial, sans-serif;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="color: #333;">Guestbook</title>
+</head>
+<body>
+  <header style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+    <h1>Guestbook</h1>
+  </header>
+
+  <main style="max-width: 600px; margin: 20px auto; padding: 0 20px;">
+    <form id="messageForm" style="display: flex; margin-bottom: 20px;">
+      <input type="text" id="messageInput" placeholder="Leave a message..." style="flex: 1; padding: 10px; font-size: 16px;">
+      <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #007bff; color: #fff; border: none; cursor: pointer;">Submit</button>
+    </form>
+    <ul id="messageList" style="list-style: none; padding: 0;"></ul>
+    <div style="height: 220px;"> </div>
+</main>
+
+  <footer style="background-color: #333; color: #fff; padding: 20px 0; text-align: center;">
+    <p>&copy; Demo GuestApp Made With <span style="color: #e25555;">&hearts;</span> By "awaislatif"</p>
+    <br>
+    <p>&copy; 2024 Guestbook App</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
