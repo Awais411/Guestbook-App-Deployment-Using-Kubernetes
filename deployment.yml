@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: guestbook-app
+  template:
+    metadata:
+      labels:
+        app: guestbook-app
+    spec:
+      containers:
+      - name: guestbook-app
+        image: awaislatif/guestbook-app:01
+        ports:
+        - containerPort: 3000
+      - name: mongo-app
+        image: mongo:latest
+        ports:
+        - containerPort: 27017
