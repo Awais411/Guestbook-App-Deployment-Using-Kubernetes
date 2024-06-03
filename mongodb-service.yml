@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service # Name for your service
+spec:
+  selector:
+    app: mongodb # Selects pods with "app: mongodb" label
+  ports:
+  - protocol: TCP
+    port: 27107 # Choose an external port (e.g., 8080)
+    targetPort: 27017 # Target port inside the container (default MongoDB port)
+  # Consider adding a service type here (optional)
+  # type: NodePort # Uncomment for NodePort service (access from VPC)
+  # type: LoadBalancer # Uncomment for LoadBalancer service (external access)
+

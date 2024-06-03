@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongodb-deployment
+spec:
+  replicas: 1 # Number of MongoDB replica set pods (consider 3 for replica set)
+  selector:
+    matchLabels:
+      app: mongodb
+  template:
+    metadata:
+      labels:
+        app: mongodb
+    spec:
+      containers:
+      - name: mongodb
+        image: mongo:latest # Replace with specific MongoDB image (consider official image)
+        ports:
+        - containerPort: 27017 # Default MongoDB port
+        # Environment variables for volume mounting (optional)
+        # env:
+        #   - name: MONGODB_DATA_DIR
+        #     value: /data/db
+  # Define volume claim template for persistent storage (optional)
+  # volumes:
+  #   - name: mongodb-data
+  #     persistentVolumeClaim:
+  #       claimName: mongodb-pvc
